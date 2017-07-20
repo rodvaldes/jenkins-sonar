@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh "mvn --version"
+                sh "mvn -f bamboo-specs-tutorial/pom.xml clean test"
             }
         }
     }
