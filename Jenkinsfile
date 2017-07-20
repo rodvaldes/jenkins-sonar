@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh "mvn -f bamboo-specs-tutorial/pom.xml clean test"
+                sh "mvn -u -f bamboo-specs-tutorial/pom.xml clean test cobertura:cobertura -Dcobertura.report.format=xml"
             }
             post {
                 always {
