@@ -7,5 +7,6 @@ Construir la imagen docker para el contenedor Jenkins
 ``` bash
 docker build -t myjenkins . 
 ```
-
+```bash
 docker run -p 8080:8080 -v `pwd`/downloads:/var/jenkins_home/downloads --rm --name myjenkins myjenkins:latest
+```
