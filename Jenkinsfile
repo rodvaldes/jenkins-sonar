@@ -9,6 +9,11 @@ pipeline {
             steps {
                 sh "mvn -f bamboo-specs-tutorial/pom.xml clean test"
             }
+            post {
+                always {
+                    junit '**/target/*-reports/TEST-*.xml'
+                }
+            }
         }
     }
 }
