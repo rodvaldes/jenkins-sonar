@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    tools {
+        jdk 'jdk8'
+        maven 'maven3'
+    }
+    stages {
+        stage('install and sonar parallel') {
+            steps {
+                parallel(install: {
+                    sh "mvn -U -f bamboo-specs-tutorial clean test cobertura:cobertura -Dcobertura.report.format=xml"
+                }, sonar: {
+                    sh "mvn -U -f bamboo-specs-tutorial sonar:sonar -Dsonar.host.url=${env.SONARQUBE_HOST}"
+                })
+            }
+            post {
+                always {
+                    junit '**/target/*-reports/TEST-*.xml'
+                }
+            }
+        }
+    }
+}
