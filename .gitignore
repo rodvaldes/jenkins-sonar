@@ -2,3 +2,4 @@ downloads
 .idea/
 .DS_Store
 target/
+m2deps/
