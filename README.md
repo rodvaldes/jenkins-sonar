@@ -57,5 +57,23 @@ cyberlaptop:jenkins-sonar rvaldes$  ./scripts/bash/backup-volume.sh download `pw
 tar -czvf download-18082017.tar.gz /Users/rvaldes/Containers/personal/jenkins-sonar
 ```
 
+# Sonarqube
+
+````bash
+docker pull sonarqube:latest
+``
+
 
   
+  
+  docker run -d --name sonarqube \
+  -p 9000:9000 \
+  -p 9092:9092 \
+  -v `pwd`/data/sonarqube:/opt/sonarqube \
+  sonarqube:5.6.6
+  
+  docker run -d --name sonarqube \
+    -p 9000:9000 \
+    -p 9092:9092 \
+    sonarqube:5.6.6
+

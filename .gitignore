@@ -4,3 +4,5 @@ downloads
 target/
 m2deps/
 jobs
+data
+*.tar.gz
