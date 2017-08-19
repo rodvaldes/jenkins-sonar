@@ -46,6 +46,16 @@ Los volumenes de persistencia son segmentos de storage dispuesto por el host par
 opción por primera vez, se debe contar con una copia de los volumenes de arranque (rodrigovaldes@gmail.com).
 
 
+## Procedimiento de Backup de Volumen
+
+Para hacer un backup del estado de los volumenes se debe usar el script/bash/backup-volume.sh. 
+
+### Ejemplo
+
+```bash
+cyberlaptop:jenkins-sonar rvaldes$  ./scripts/bash/backup-volume.sh download `pwd`
+tar -czvf download-18082017.tar.gz /Users/rvaldes/Containers/personal/jenkins-sonar
+```
 
 
   
