@@ -8,7 +8,7 @@ y Sonarqube
 [Articulo Referencia](https://dzone.com/articles/dockerizing-jenkins-2-setup-and-using-it-along-wit?edition=309196&utm_source=Daily%20Digest&utm_medium=email&utm_campaign=dd%202017-07-19)
 
 # Pre-Requisitos
----
+----
 
 * Docker Community Edition.
 
@@ -59,13 +59,20 @@ tar -czvf download-18082017.tar.gz /Users/rvaldes/Containers/personal/jenkins-so
 
 # Sonarqube
 
+## Obtener la última version de la imagen oficial de Sonarqube.
+ 
 ````bash
 docker pull sonarqube:latest
-``
+````
 
+## Obtener la versión LTS 5.6.6
+````bash
+docker pull sonarqube:5.6.6
+````
 
+## Inciar el contenedor 
   
-  
+ ````bash 
   docker run -d --name sonarqube \
   -p 9000:9000 \
   -p 9092:9092 \
@@ -76,4 +83,4 @@ docker pull sonarqube:latest
     -p 9000:9000 \
     -p 9092:9092 \
     sonarqube:5.6.6
-
+````
