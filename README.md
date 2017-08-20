@@ -70,7 +70,7 @@ docker pull sonarqube:latest
 docker pull sonarqube:5.6.6
 ````
 
-## Inciar el contenedor 
+## Inciar el contenedor con volumen de Persistencia
   
  ````bash 
   docker run -d --name sonarqube \
@@ -78,7 +78,8 @@ docker pull sonarqube:5.6.6
   -p 9092:9092 \
   -v `pwd`/data/sonarqube:/opt/sonarqube \
   sonarqube:5.6.6
-  
+  ````
+  ````bash
   docker run -d --name sonarqube \
     -p 9000:9000 \
     -p 9092:9092 \
