@@ -11,7 +11,7 @@
 
 	<!-- Define the Sonar properties -->
 	<property name="sonar.projectKey" value="org.sonarqube:sonarqube-scanner-ant" />
-	<property name="sonar.projectName" value="Example of SonarQube Scanner for Ant Usage" />
+	<property name="sonar.projectName" value="Ejemplo 1 Java Sonar Ant" />
 	<property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.language" value="java" />
 	<property name="sonar.sources" value="src" />
